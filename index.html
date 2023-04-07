@@ -25,6 +25,7 @@
                 <li class="operator">Java Operator</li>
                 <li class="string">Java String</li>
                 <li class="math">Java Math</li>
+                <li class="boolean">Boolean</li>
             </ul>
         </aside>
             <section id="start" class="">
@@ -589,13 +590,305 @@
                 </div>
             </section>
             <section id="operator">
-                Operator
+               <div>
+                <h1>Java Operators</h1>
+                <p>Operators are used to perform operations on variables and values. <br><br>
+
+                    In the example below, we use the + operator to add together two values:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int x = 100 + 50;</h2>
+                    </nav>
+                    <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>
+                            int sum1 = 100 + 50;    <samp>// 150 (100 + 50 )</samp><br>
+                            int sum2 = sum1 + 250;  <samp>// 400 (150 + 250)</samp><br>
+                            int sum3 = sum2 + sum2; <samp>// 800 (400 + 400)</samp>
+                            </h2>
+                    </nav>
+                    <p>Java divides the operators into the following groups:</p>
+                    <ul class="list">
+                        <li>Arithmetic operators</li>
+                        <li>Assignment operators</li>
+                        <li>Comparison operators</li>
+                        <li>Logical operators</li>
+                        <li>Bitwise operators</li>
+                    </ul>
+                    <hr><br><br>
+                    <h1>Arithmetic Operators</h1>
+                    <p>Arithmetic operators are used to perform common mathematical operations.</p>
+                    <table>
+                        <tr>
+                            <td>Operator</td>
+                            <td>Name</td>
+                            <td>Description</td>
+                            <td>Example</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>Adds together two values</td>
+                            <td>x + y</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>Subtracts one value from another</td>
+                            <td>x - y</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>Multiplies two values</td>
+                            <td>x * y</td>
+                        </tr>	
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>Divides one value by another</td>
+                            <td>x / y</td>
+                        </tr>	
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus</td>
+                            <td>Returns the division remainder</td>
+                            <td>x % y</td>
+                        </tr>	
+                        <tr>
+                            <td>++</td>
+                            <td>Increment</td>
+                            <td>Increases the value of a variable by 1</td>
+                            <td>++x</td>
+                        </tr>
+                        <tr>
+                            <td>--</td>
+                            <td>Decrement</td>
+                            <td>Decreases the value of a variable by 1</td>
+                            <td>--x</td>
+                        </tr>
+                    </table>
+                    <h1>Java Assignment Operators</h1>
+                    <p>Assignment operators are used to assign values to variables. <br>
+                        In the example below, we use the assignment operator (=) to assign the 10 to a variable called x:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int x = 10;</h2>
+                    </nav>
+                    <p>The addition assignment operator (+=) adds a value to a variable:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int x = 10; <br>
+                            x += 5;</h2>
+                    </nav>
+                    <p>A list of all assignment operators:</p>
+                    <table><tr> <td>Operator</td> <td>Example</td> <td>Same as</td>
+                        </tr><tr> <td>    =</td> <td>x = 5</td>	 <td>x = 5</td>	
+                        </tr><tr> <td>+=</td> <td>x +=  3</td> <td>x = x +  3 </td>	
+                        </tr><tr> <td>-=</td> <td>x -=  3</td> <td>x = x -  3 </td>	
+                        </tr><tr> <td>*=</td> <td>x *=  3</td> <td>x = x *  3</td>
+                        </tr><tr> <td>/=</td> <td>x /=  3</td> <td>x = x /  3 	</td>
+                        </tr><tr> <td>%=</td> <td>x %=  3</td> <td>x = x %  3 </td>	
+                        </tr><tr> <td>&=</td> <td>x &=  3</td> <td>x = x &  3 	</td>
+                        </tr><tr> <td>|=</td> <td>x |=  3</td> <td>x = x |  3 	</td>
+                        </tr><tr> <td>^=</td> <td>x ^=  3</td> <td>x = x ^  3 	</td>
+                        </tr><tr> <td>>>=</td> <td>x >>= 3</td> <td>x = x >> 3</td>
+                        </tr><tr> <td>&lt;&lt;=</td> <td>x &lt;&lt;= 3</td> <td>x = x &lt;&lt; 3</td>
+                        </tr>
+                    </table>
+                    <h1>Java Comparison Operators</h1>
+                    <p>Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions. <br></p>
+                    <p>The return value of a comparison is either true or false. These values are known as Boolean values, and you will learn more about them in the Booleans and If..Else chapter.</p>
+                    <p>In the following example, we use the greater than operator (>) to find out if 5 is greater than 3:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int x = 5; <br>
+                            int y = 3; <br>
+                            System.out.println(x > y);  <br>
+                            <samp>// returns true, because 5 is higher than 3</samp></h2>
+                    </nav>
+                    <table><tr><td>Operator</td><td>Name</td><td>Example</td></tr><tr><td>==</td>	<td>Equal to</td> <td>x == y</td>	</tr><tr><td>!=</td>	<td>Not equal</td>  <td>x != y</td>	</tr><tr><td> ></td>	<td>Greater than</td> <td>x > y	</td></tr><tr><td> &lt;</td>	<td>Less than</td>  <td>x &lt; y	</td></tr><tr><td>>=</td>	<td>Greater than or equal to</td>	<td>x >= y</td>	</tr><tr><td>&lt;=</td>	<td>Less than or equal to</td>  <td>x &lt;= y</td></tr>
+                    </table>
+                    <h1>Java Logical Operators</h1>
+                    <p>You can also test for true or false values with logical operators. <br>
+                        Logical operators are used to determine the logic between variables or values:</p>
+                    <table>
+                        <tr><td>Operator</td><td>Description</td><td>Example</td></tr>
+                        <tr><td>&&</td><td>Logical and	Returns true if both statements are true</td><td>x < 5 &&  x < 10</td>
+                        </tr>
+                        <tr><td>||</td><td>Logical or	Returns true if one of the statements is true</td><td>x < 5 || x < 4</td>
+                        </tr>
+                        <tr><td>!</td><td>Logical not	Reverse the result, returns false if the result is true</td><td>!(x < 5 && x < 10)</td></tr>
+                    </table>
+               </div>
             </section>
             <section id="string">
-                String
+                <div>
+                    <h1>Java Strings</h1>
+                    <p>Strings are used for storing text. <br><br><br>
+                        A String variable contains a collection of characters surrounded by double quotes:</p>
+                    <nav class="code">
+                        <h4>Example</h4>
+                        <p>Create a variable of type String and assign it a value:</p>
+                        <h2>String greeting = "Hello";</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>String Length</h1>
+                    <p>A String in Java is actually an object, which contain methods that can perform certain <br> operations on strings. For example, the length of a string can be found with the length() method: <br>
+                    </p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String txt = "ABCD"; <br>
+                            System.out.println("lenght is: "+ txt.length());</h2>
+                    </nav>
+                    <h1>More String Methods</h1>
+                    <p>There are many string methods available, for example toUpperCase() and toLowerCase():</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String txt = "Hello World"; <br>
+                            System.out.println(txt.toUpperCase());<br> <samp>// Outputs "HELLO WORLD"</samp> <br>
+                            System.out.println(txt.toLowerCase());<br><samp>// Outputs "hello world"</samp></h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Finding a Character in a String</h1>
+                    <p>The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String txt = "find'locate'"; <br>
+                            System.out.println(txt.indexOf("locate")); <samp>// Outputs 5</samp></h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Complete String Reference</h1>
+                    <p>For a complete reference of String methods, go to our Java String Methods Reference. <br><br>
+                    The reference contains descriptions and examples of all string methods.</p>
+                    <hr><br><br>
+                    <h1>String Concatenation</h1>
+                    <p>The + operator can be used between strings to combine them. This is called concatenation:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String firstName = "John"; <br>
+                            String lastName = "Doe";<br>
+                            System.out.println(firstName + " " + lastName);</h2>
+                    </nav>
+                    <p>You can also use the concat() method to concatenate two strings:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String firstName = "John ";<br>
+                            String lastName = "Doe";<br>
+                            System.out.println(firstName.concat(lastName));</h2>
+                    </nav><hr><br><br>
+                    <h1>Adding Numbers and Strings</h1>
+                    <p> <mark>WARNING!!!</mark><br><br>
+                        Java uses the + operator for both addition and concatenation. <br>
+                        
+                        Numbers are added. Strings are concatenated.</p>
+                        <p>If you add two numbers, the result will be a number:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int x = 10;<br>
+                            int y = 20;<br>
+                            int z = x + y; <br><samp>// z will be 30 (an integer/number)</samp></h2>
+                    </nav>
+                    <p>If you add two strings, the result will be a string concatenation:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String x = "10";<br>
+                            String y = "20";<br>
+                            String z = x + y;<br><samp>// z will be 1020 (a String)</samp></h2>
+                    </nav>
+                    <p>If you add a number and a string, the result will be a string concatenation:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String x = "10";<br>
+                            int y = 20;<br>
+                            String z = x + y;<br><samp>// z will be 1020 (a String)</samp>
+                        </h2>
+                    </nav>
+                    <h1>Strings - Special Characters</h1>
+                    <p>Because strings must be written within quotes, Java will misunderstand this string, and generate an error:</p>
+                    <nav class="code">
+                            <h2 class="error">String txt = "We are "Vikings" the north.";</h2>
+                    </nav>
+                    <p>The solution to avoid this problem, is to use the backslash escape character. <br><br>
+                        The backslash (\) escape character turns special characters into string characters:</p>
+                    <table>
+                        <tr><td>Escape character</td><td>Result</td><td>Description</td></tr>
+                        <tr><td>\'</td><td>'</td><td>Single quote</td></tr>
+                        <tr><td>\"</td><td>"</td><td>Double quote</td></tr>
+                        <tr><td>\\</td><td>\</td><td>Backslash</td></tr>
+                    </table>
+                    <p>The sequence \"  inserts a double quote in a string:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>String txt = "We are\"Vikings\"north.";</h2>
+                    </nav>
+                    <table><tr><td>Code</td><td>Result</td></tr><tr><td>\n</td><td>New Line</td>	</tr><tr><td>\r</td><td>Carriage Return</td>	</tr><tr><td>\t</td><td>Tab	</td></tr><tr><td>\b</td><td>Backspace	</td></tr><tr><td>\f</td><td>Form Feed</td></tr>
+                    </table>
+                </div>
             </section>
             <section id="math">
-                Math
+                <div>
+                    <h1>Java Math</h1>
+                    <p>The Java Math class has many methods that allows you to perform mathematical tasks on numbers.</p>
+                    <h1>Math.max(x,y)</h1>
+                    <p>The Math.max(x,y) method can be used to find the highest value of x and y:</p>
+                    <nav class="code">
+                        <h2>Math.min(5, 10);</h2>
+                    </nav>
+                    <h1>Math.sqrt(x)</h1>
+                    <p>The Math.sqrt(x) method returns the square root of x:</p>
+                    <nav class="code">
+                        <h2>Math.sqrt(64);</h2>
+                    </nav>
+                    <h1>Math.abs(x)</h1>
+                    <p>The Math.abs(x) method returns the absolute (positive) value of x:</p>
+                    <nav class="code">
+                        <h2>Math.abs(-4.7);</h2>
+                    </nav>
+                    <h1>Random Numbers</h1>
+                    <p>Math.random() returns a random number between 0.0 (inclusive), and 1.0 (exclusive):</p>
+                    <nav class="code">
+                        <h2>Math.random();</h2>
+                    </nav>
+                    <p>To get more control over the random number, for example, if you only want a random number between 0 and 100, you can use the following formula:</p>
+                    <nav class="code">
+                        <h2>int randomNum = (int)(Math.random() * 101);<samp>// 0 to 100</samp></h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="boolean">
+                <div>
+                    <h1>Boolean Values</h1>
+                    <p>A boolean type is declared with the boolean keyword and can only take the values true or false:</p>
+                    <nav class="code">
+                        <h2>boolean isJavaFun = true;<br>
+                            boolean isFishTasty = false;<br>
+                            System.out.println(isJavaFun);<samp>// Outputs true</samp><br>                          System.out.println(isFishTasty);<samp>// Outputs false</samp></h2>
+                    </nav>
+                    <p>However, it is more common to return boolean values from boolean expressions, for conditional testing (see below).</p>
+                    <hr><br><br>
+                    <h1>Boolean Expression</h1>
+                    <p>A Boolean expression returns a boolean value: true or false. <br><br>
+                        This is useful to build logic, and find answers. <br><br>
+                        For example, you can use a comparison operator, such as the greater than (>) operator, to find <br> <br> out if an expression (or a variable) is true or false:</p>
+                        <nav class="code">
+                            <h2>int x = 10;<br>
+                                int y = 9;<br>
+                                System.out.println(x > y);<samp>// returns true, because 10 is higher than 9</samp>
+                                </h2>
+                                <p>Or even easier:</p>
+                                <h2>System.out.println(10 > 9);<br><samp>// returns true, because 10 is higher than 9</samp></h2>
+                        </nav>
+                        <p>In the examples below, we use the equal to (==) operator to evaluate an expression:</p>
+                        <nav class="code">
+                            <h2>int x = 10;<br>
+                                System.out.println(x == 10); <br><samp>// returns true, because the value of x is equal to 10</samp></h2>
+                        </nav>
+                        <nav class="code">
+                            <h2>System.out.println(10 == 15);<br><samp> // returns false, because 10 is not equal to 15</samp></h2>
+                        </nav>
+                </div>
             </section>
     </div>
 </body>
