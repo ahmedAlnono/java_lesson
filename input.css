@@ -97,7 +97,7 @@ h1{
 .code{
     background-color: rgb(54, 54, 82);
     padding:15px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom:20px;
 }
 .code h2{
@@ -157,7 +157,13 @@ table {
   tr:nth-child(even) {
     background-color: #201f38;
 }
-
+ul h2{
+    text-align: center;
+    margin-top:20px;
+}
+section div h4{
+    line-height: 2;
+}
 @media screen and (max-width:800px) {
     aside{
         position: absolute;

@@ -26,6 +26,22 @@
                 <li class="string">Java String</li>
                 <li class="math">Java Math</li>
                 <li class="boolean">Boolean</li>
+                <li class="if-else">If Else</li>
+                <li class="while-loop">While Loop</li>
+                <li class="for-loop">For Loop</li>
+                <li class="array">Arrays</li>
+                <hr>
+                <h2>Java Method</h2>
+                <li class="method">Java Method</li>
+                <li class="method-overloading">Method OverLoading</li>
+                <li class="scoope">Scoope</li>
+                <li class="recursion">Recursion</li>
+                <h2>Java OOP</h2>
+                <li class="java-oop">OOP</li>
+                <li class="class-object">Class/Object</li>
+                <li class="oop-attribute">Attribute</li>
+                <li class="oop-method">Method</li>
+                <li class="constructor">Constructor</li>
             </ul>
         </aside>
             <section id="start" class="">
@@ -890,6 +906,593 @@
                         </nav>
                 </div>
             </section>
+            <section id="if-else">
+                <div>
+                    <h1>Java Conditions and If Statements</h1>
+                    <p>You already know that Java supports the usual logical conditions from mathematics:</p>
+                    <ul class="list">
+                        <li>Less than: a < b</li>
+                        <li>Less than or equal to: a <= b</li>
+                        <li>Greater than: a > b</li>
+                        <li>Greater than or equal to: a >= b</li>
+                        <li>Equal to a == b</li>
+                        <li>Not Equal to: a != b</li>
+                    </ul>
+                    <p>You can use these conditions to perform different actions for different decisions. <br><br>
+
+                        Java has the following conditional statements:</p>
+                    <ul>
+                        <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+                        <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+                        <li>Use else if to specify a new condition to test, if the first condition is false</li>
+                        <li>Use switch to specify many alternative blocks of code to be executed</li>
+                    </ul><br>
+                    <hr><br><br>
+                    <h1>The if Statement</h1>
+                    <p>Use the if statement to specify a block of Java code to be executed if a condition is true</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>if (condition) { <br>
+                           <em>....</em> <samp>// block of code </samp><br>
+                          }</h2>
+                    </nav>
+                    <p>In the example below, we test two values to find out if 20 is greater than 18. If the condition <br><br> is true, print some text:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>if (20 > 18) { <br>
+                           <em>....</em> System.out.println("20 is greater than 18"); <br>
+                          }</h2>
+                    </nav><br><br>
+                    <p>We can also test variables:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int x = 20; <br>
+                            int y = 18; <br>
+                            if (x > y) { <br>
+                            <em>....</em> System.out.println("x is greater than y"); <br>
+                            }</h2>
+                    </nav>
+                    <h3>Example explained</h3>
+                    <p>In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".</p>
+                    <hr><br><br>
+                    <h1>The else if Statement</h1>
+                    <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>if (condition1) {<br>
+                            <samp>// block of code to be executed if condition1 is true</samp><br>
+                          } else if (condition2) { <br>
+                            <samp>// block of code to be executed if the condition1 is false and condition2 is true</samp><br>
+                          } else { <br>
+                            <samp>// block of code to be executed if the condition1 is false and condition2 is false</samp> <br>
+                          }</h2>
+                    </nav>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int time = 22;<br>
+                            if (time < 10) {<br>
+                            <em>....</em>  System.out.println("Good morning.");<br>
+                            } else if (time < 18) {<br>
+                            <em>....</em> System.out.println("Good day.");<br>
+                            } else {<br>
+                            <em>.....</em> System.out.println("Good evening.");<br>
+                            }
+                            <samp>// Outputs "Good evening."</samp></h2>
+                    </nav>
+                    <h3>Example explained</h3>
+                    <p>In the example above, time (22) is greater than 10, so the first condition is false. The next condition, in the else if statement, is also false, so we move on to the else condition since condition1 and condition2 is both false - and print to the screen "Good evening".</p>
+                    <p>However, if the time was 14, our program would print "Good day."</p>
+                    <hr><br><br>
+                    <h1>Short Hand If...Else</h1>
+                    <p>There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. <br><br>
+
+                        It can be used to replace multiple lines of code with a single line, and is most often used to replace simple if else statements:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>variable = (condition) ? expressionTrue :  expressionFalse;</h2>
+                    </nav><br><br><br>
+                    <nav class="code">
+                        <p>Instead of writing:</p>
+                        <h2>int time = 20;<br>
+                            if (time < 18) {<br>
+                            <em>__</em>System.out.println("Good day.");<br>
+                            } else {<br>
+                            <em>__</em> System.out.println("Good evening.");<br>
+                            }</h2>
+                            <p>You can simply write:</p>
+                            <h2>int time = 20;<br>
+                                String result = <br>
+                                (time < 18) ? "Good day." : "Good evening.";<br>
+                                System.out.println(result);</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Java Switch Statements</h1>
+                    <p>Instead of writing many if ..else statements, you can use the switch statement. <br><br><br>
+                    The switch statement selects one of many code blocks to be executed:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>switch(expression) { <br>
+                            case x: <br>
+                              <em>__</em> <samp>// code block</samp><br>
+                              <em>__</em> break;<br>
+                            case y: <br>
+                              <em>__</em> <samp>// code block</samp><br>
+                              <em>__</em> break; <br>
+                            default: <br>
+                              <em>__</em> <samp>// code block</samp><br>
+                          }</h2>
+                    </nav>
+                    <p>This is how it works:</p>
+                    <ul>
+                        <li>The switch expression is evaluated once.</li>
+                        <li>The value of the expression is compared with the values of each case.</li>
+                        <li>If there is a match, the associated block of code is executed.</li>
+                        <li>The break and default keywords are optional, and will be described later in this chapter</li>
+                    </ul>
+                    <p>The example below uses the weekday number to calculate the weekday name:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>
+                            int day = 4;
+switch (day) {<br>
+  <em>__</em> case 1: <br>
+    <em>__</em> System.out.println("Monday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> case 2: <br>
+    <em>__</em> System.out.println("Tuesday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> case 3: <br>
+    <em>__</em> System.out.println("Wednesday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> case 4: <br>
+    <em>__</em> System.out.println("Thursday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> case 5: <br>
+    <em>__</em> System.out.println("Friday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> case 6: <br>
+    <em>__</em> System.out.println("Saturday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> case 7: <br>
+    <em>__</em> System.out.println("Sunday"); <br>
+    <em>____</em> break; <br><br>
+} <samp>// Outputs "Thursday" (day 4)</samp>
+                        </h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="while-loop">
+                <div>
+                    <h1>Loops</h1>
+                    <p>Loops can execute a block of code as long as a specified condition is reached. <br><br><br>
+                        Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+                    <h1>Java While Loop</h1>
+                    <p>The while loop loops through a block of code as long as a specified condition is true:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>while (condition) {<br>
+                            <em>__</em><samp>// code block to be executed</samp><br>
+                          }</h2>
+                          <p>Example</p>
+                          <h2>int i = 0;<br>
+                            while (i < 5) {<br>
+                            <em>___</em>System.out.println(i);<br>
+                            <em>___</em>i++;<br>
+                            }</h2>
+                    </nav>
+                    <h3>Note: Do not forget to increase the variable used in the condition, otherwise the loop will never end!</h3>
+                    <hr><br><br><br>
+                    <h1>The Do/While Loop</h1>
+                    <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>do {<br>
+                            <samp>// code block to be executed</samp>
+                          } <br>
+                          while (condition);</h2>
+                          <p>The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+                        <h2>int i = 0;<br>
+                            do {<br>
+                            <em>__</em> System.out.println(i);<br>
+                            <em>__</em> i++;<br>
+                            } <br>
+                            while (i < 5);</h2>      
+                    </nav>
+                    <h3>Do not forget to increase the variable used in the condition, otherwise the loop will never end!</h3>
+                </div>
+            </section>
+            <section id="for-loop">
+                <div>
+                    <h1>Java For Loop</h1>
+                    <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>for (statement 1; statement 2; statement 3) { <br>
+                            <em>__</em><samp>// code block to be executed</samp><br>
+                          }</h2>
+                    </nav>
+                    <p><h3>Statement</h3> 1 is executed (one time) before the execution of the code block. <br>
+                        <h3>Statement</h3> 2 defines the condition for executing the code block. <br>
+                        <h3>Statement</h3> 3 is executed (every time) after the code block has been executed. <br>
+                        The example below will print the numbers 0 to 4:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2>for (int i = 0; i < 5; i++) {<br>
+                               <em>__</em> System.out.println(i);<br>
+                              }</h2>
+                        </nav>
+                        <p>Example explained
+                            Statement 1 sets a variable before the loop starts (int i = 0). <br>
+                            Statement 2 defines the condition for the loop to run (i must be less than 5). If the <br> condition is true, the loop will start over again, if it is false, the loop will end. <br>
+                            Statement 3 increases a value (i++) each time the code block in the loop has been <br>  executed.</p>
+                            <h1>Another Example</h1>
+                            <p>This example will only print even values between 0 and 10;</p>
+                            <nav class="code">
+                                <h2>for (int i = 0; i <= 10; i = i + 2){ <br>
+                                    <em>__</em> System.out.println(i); <br>
+                                  }</h2>
+                            </nav>
+                            <hr><br><br>
+                            <h1>Nested Loops</h1>
+                            <p>It is also possible to place a loop inside another loop. This is called a nested loop. <br> The "inner loop" will be executed one time for each iteration of the "outer loop":</p>
+                            <nav class="code">
+                                <h2><samp>// Outer loop</samp><br>
+                                    for (int i = 1; i <= 2; i++) { <br>
+                                    <em>__</em> System.out.println("Outer: " + i); <samp> // Executes 2 times</samp><br>
+                                      <br>
+                                      <samp>// Inner loop</samp> <br>
+                                      for (int j = 1; j <= 3; j++) { <br>
+                                       <em>__</em> System.out.println(" Inner: " + j); <samp>// Executes 6 times (2 * 3)</samp><br>
+                                      } <br>
+                                    }</h2>
+                            </nav>
+                            <hr><br><br>
+                            <h1>For-Each Loop</h1>
+                            <p>There is also a "for-each" loop, which is used exclusively to loop through elements in an array:</p>
+                            <nav class="code">
+                                <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                                    for (String i : cars) { <br>
+                                    <em>__</em>System.out.println(i); <br>
+                                    }</h2>
+                            </nav>
+                            <h3>Note: Don't worry if you don't understand the example above. You will learn more about Arrays in the Java Arrays chapter.</h3>
+                            <hr><br><br>
+                            <h1>Java Break</h1>
+                            <p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.The break statement can also be used to jump out of a loop.This example stops the loop when i is equal to 4:</p>
+                            <nav class="code">
+                                <h2>for (int i = 0; i < 10; i++) { <br>
+                                    <em>__</em>if (i == 4) { <br>
+                                    <em>____</em>break; <br>
+                                    } <br>
+                                    <em>__</em> System.out.println(i);<br>
+                                  }</h2>
+                            </nav>
+                            <hr><br><br>
+                            <h1>Java Continue</h1>
+                            <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.This example skips the value of 4:</p>
+                            <nav class="code">
+                                <h2>for (int i = 0; i < 10; i++) { <br>
+                                    <em>__</em> if (i == 4) { <br>
+                                    <em>____</em>   continue; <br>
+                                    } <br>
+                                    <em>__</em> System.out.println(i); <br>
+                                  }</h2>
+                            </nav>
+                </div>
+            </section>
+            <section id="array">
+                <div>
+                    <h1>Java Arrays</h1>
+                    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.To declare an array, define the variable type with square brackets:</p>
+                    <nav class="code">
+                        <h2>String[] cars;</h2>
+                    </nav>
+                    <p>We have now declared a variable that holds an array of strings. To insert values to it, you can place the values in a comma-separated list, inside curly braces:</p>
+                    <nav class="code">
+                        <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};</h2>
+                    </nav>
+                    <p>To create an array of integers, you could write:</p>
+                    <nav class="code">
+                        <h2>int[] myNum = {10, 20, 30, 40};</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Access the Elements of an Array</h1>
+                    <p>You can access an array element by referring to the index number. <br><br>This statement accesses the value of the first element in cars:</p>
+                    <nav class="code">
+                        <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            System.out.println(cars[0]); <br>
+                        <samp>// Outputs Volvo</samp></h2>
+                    </nav><hr><br><br>
+                    <h1>Change an Array Element</h1>
+                    <p>To change the value of a specific element, refer to the index number:</p>
+                    <nav class="code">
+                        <h2>cars[0] = "Opel";</h2>
+                    </nav>
+                    <nav class="code">
+                        <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            cars[0] = "Opel"; <br>
+                            System.out.println(cars[0]); <br>
+                            <samp>// Now outputs Opel instead of Volvo</samp>
+                            </h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Array Length</h1>
+                    <p>To find out how many elements an array has, use the length property:</p>
+                    <nav class="code">
+                        <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            System.out.println(cars.length); <br>
+                            <samp>// Outputs 4</samp>
+                            </h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Loop Through an Array</h1>
+                    <p>You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.The following example outputs all elements in the cars array:</p>
+                    <nav class="code">
+                        <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            for (int i = 0; i < cars.length; i++) { <br>
+                                <em>__</em> System.out.println(cars[i]); <br>
+                            }</h2><br><hr><br>
+                           <h2>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            for (String i : cars) { <br>
+                            <em>__</em> System.out.println(i); <br>
+                            }</h2>
+                            <p>The example above can be read like this: for each String element (called i - as in index) in cars, print out the value of i.
+                            If you compare the for loop and for-each loop, you will see that the for-each method is easier to write, it does not require a counter (using the length property), and it is more readable.
+                            </p>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Multidimensional Arrays</h1>
+                    <p>A multidimensional array is an array of arrays.
+                    Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.To create a two-dimensional array, add each array within its own set of curly braces:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };</h2>
+                        <h3>myNumbers is now an array with two arrays as its elements.</h3>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Access Elements</h1>
+                    <nav class="code">
+                        <h2>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; <br>
+                            System.out.println(myNumbers[1][2]); <samp>// Outputs 7</samp></h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Loop Through a Multi-Dimensional Array</h1>
+                    <p>We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):</p>
+                    <nav class="code">
+                        <h2>public class Main {
+                            public static void main(String[] args) { <br>
+                             <em>__</em> int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; <br>
+                             <em>____</em>for (int i = 0; i < myNumbers.length; ++i) { <br>
+                             <em>______</em>for(int j = 0; j < myNumbers[i].length; ++j) { <br>
+                             <em>________</em>System.out.println(myNumbers[i][j]); <br>
+                             <em>______</em>} <br>
+                              <em>____</em>  } <br>
+                            <em>__</em> } <br>
+                          }</h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="method">
+                <div>
+                    <h1>Java Methods</h1>
+                    <h4>A method is a block of code which only runs when it is called.You can pass data, known as parameters, into a method.Methods are used to perform certain actions, and they are also known as functions.Why use methods? To reuse code: define the code once, and use it many times.</h4>
+                    <hr><br><br>
+                    <h1>Create a Method</h1>
+                    <p>A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:</p>
+                    <nav class="code">
+                        <h3>Example</h3>
+                        <p>Create a method inside Main:</p>
+                        <h2>public class Main { <br>
+                            static void myMethod() { <br>
+                            <samp>// code to be executed</samp> <br>
+                            } <br>
+                          }</h2>
+                    </nav>
+                    <p>Example Explained</p>
+                    <ul>
+                        <li>myMethod() is the name of the method</li>
+                        <li>static means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                        <li>void means that this method does not have a return value. You will learn more about return values later in this chapter</li>
+                    </ul><hr><br><br>
+                    <h1>Call a Method</h1>
+                    <h4>To call a method in Java, write the method's name followed by two parentheses () and a semicolon;
+                        In the following example, myMethod() is used to print a text (the action), when it called:</h4>
+                        <nav class="code">
+                            <p>Inside main, call the myMethod() method:</p>
+                            <h2>public class Main { <br>
+                                static void myMethod() { <br>
+                                  <em>___</em> System.out.println("I just got executed!"); <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                <em>___</em>  myMethod(); <br>
+                                } <br>
+                              } <br>
+                              
+                              <samp>// Outputs "I just got executed!"</samp></h2>
+                        </nav>
+                        <p>A method can also be called multiple times:</p>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+                                static void myMethod() { <br>
+                                  System.out.println("I just got executed!"); <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                 <em>__</em> myMethod(); <br>
+                                 <em>__</em> myMethod(); <br>
+                                 <em>__</em> myMethod(); <br>
+                                } <br>
+                              } <br>
+                              <samp>// I just got executed!</samp> <br>
+                              <samp>// I just got executed!</samp> <br>
+                              <samp>// I just got executed!</samp></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>Parameters and Arguments</h1>
+                        <h4>Information can be passed to methods as parameter. Parameters act as variables inside the method.Parameters are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.The following example has a method that takes a String called fname as parameter.When the method is called, we pass along a first name, which is used inside the method to print the full name:</h4>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+                                static void myMethod(String fname) { <br>
+                                <em>__</em> System.out.println(fname + " Refsnes"); <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                 <em>__</em> myMethod("Liam"); <br>
+                                 <em>__</em> myMethod("Jenny"); <br>
+                                 <em>__</em> myMethod("Anja"); <br>
+                                } <br>
+                              } <br>
+                             <samp> // Liam Refsnes</samp><br>
+                              <samp>// Jenny Refsnes</samp><br>
+                              <samp>// Anja Refsnes </samp></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>Multiple Parameters</h1>
+                        <p>You can have as many parameters as you like:</p>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+                                static void myMethod(String fname, int age) {<br>
+                                <em>__</em>  System.out.println(fname + " is " + age);<br>
+                                }<br>
+                              <br>
+                                public static void main(String[] args) {<br>
+                                <em>__</em>myMethod("Liam", 5);<br>
+                                <em>__</em>myMethod("Jenny", 8);<br>
+                                <em>__</em>myMethod("Anja", 31);<br>
+                                }<br>
+                              }<br>
+                              
+                             <samp> // Liam is 5</samp><br>
+                              <samp>// Jenny is 8</samp><br>
+                              <samp>// Anja is 31</samp><br></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>Return Values</h1>
+                        <p>The void keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (such as int, char, etc.) instead of void, and use the return keyword inside the method:</p>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+                                static int myMethod(int x) { <br>
+                                <em>__</em> return 5 + x; <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                <em>__</em>System.out.println(myMethod(3)); <br>
+                                } <br>
+                              } <br>
+                              <samp>// Outputs 8 (5 + 3)</samp></h2>
+                        </nav>
+                        <p>This example returns the sum of a method's two parameters:</p>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+                                static int myMethod(int x, int y) { <br>
+                                 <em>__</em> return x + y; <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                 em__ System.out.println(myMethod(5, 3)); <br>
+                                } <br>
+                              } <br>
+                              <samp>// Outputs 8 (5 + 3)</samp></h2>
+                        </nav>
+                        <p>You can also store the result in a variable (recommended, as it is easier to read and maintain):</p>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+                                static int myMethod(int x, int y) { <br>
+                                 <em>__</em> return x + y; <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                 <em>___</em> int z = myMethod(5, 3); <br>
+                                 <em>___</em> System.out.println(z); <br>
+                                } <br>
+                              } <br>
+                              <samp>// Outputs 8 (5 + 3)</samp></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>A Method with If...Else</h1>
+                        <p>It is common to use if...else statements inside methods:</p>
+                        <nav class="code">
+                            <h2>public class Main { <br>
+ <br>
+                                <samp>// Create a checkAge() method with an integer variable called age</samp> <br>
+                                static void checkAge(int age) { <br>
+                               <br>
+                                  <samp>// If age is less than 18, print "access denied"</samp> <br>
+                                 <em>__</em> if (age < 18) { <br>
+                                  <em>___</em>  System.out.println("Access denied - You are not old enough!"); <br>
+                               <br>
+                                <samp>// If age is greater than, or equal to, 18, print "access granted"</samp> <br>
+                                  } else { <br>
+                                  <em>___</em>  System.out.println("Access granted - You are old enough!"); <br>
+                                  } <br>
+                               <br>
+                                } <br>
+                               <br>
+                                public static void main(String[] args) { <br>
+                                  <em>__</em> checkAge(20); <samp>// Call the checkAge method and pass along an age of 20</samp> <br>
+                                } <br>
+                              } <br>
+                              
+                              <samp>// Outputs "Access granted - You are old enough!"</samp></h2>
+                        </nav>
+                </div>
+            </section>
+            <section id="method-overloading">
+                <div>
+                    <h1>Method Overloading</h1>
+                    <p>With method overloading, multiple methods can have the same name with different parameters:</p>
+                    <nav class="code">
+                        <h2>int myMethod(int x) <br>
+                            float myMethod(float x) <br>
+                            double myMethod(double x, double y)</h2>
+                    </nav>
+                    <p>Consider the following example, which has two methods that add numbers of different type:</p>
+                    <nav class="code">
+                        <h2>static int plusMethodInt(int x, int y) { <br>
+                            return x + y; <br>
+                          } <br>
+                           <br>
+                          static double plusMethodDouble(double x, double y) { <br>
+                           <em>__</em> return x + y; <br>
+                          } <br>
+                           <br>
+                          public static void main(String[] args) { <br>
+                           <em>__</em> int myNum1 = plusMethodInt(8, 5); <br>
+                           <em>__</em> double myNum2 = plusMethodDouble(4.3, 6.26); <br>
+                           <em>__</em> System.out.println("int: " + myNum1); <br>
+                           <em>__</em> System.out.println("double: " + myNum2);
+                          }</h2>
+                    </nav>
+                    <h4>Instead of defining two methods that should do the same thing, it is better to overload one.
+
+                        In the example below, we overload the plusMethod method to work for both int and double:</h4>
+                    <nav class="code">
+                        <h2>static int plusMethod(int x, int y) { <br>
+                           <em>__</em> return x + y; <br>
+                          } <br>
+                           <br>
+                          static double plusMethod(double x, double y) { <br>
+                           <em>__</em> return x + y; <br>
+                          } <br>
+                           <br>
+                          public static void main(String[] args) { <br>
+                           <em>__</em> int myNum1 = plusMethod(8, 5); <br>
+                           <em>__</em> double myNum2 = plusMethod(4.3, 6.26); <br>
+                           <em>__</em> System.out.println("int: " + myNum1); <br>
+                           <em>__</em> System.out.println("double: " + myNum2);
+                          }</h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="scoope"></section>
+            <section id="recursion"></section>
+            <!-- finish java method -->
+            <section id="java-oop"></section>
+            <section id="class-object"></section>
+            <section id="oop-attribute"></section>
+            <section id="oop-method"></section>
+            <section id="constructor"></section>
     </div>
 </body>
 <script src="./main.js"></script>
