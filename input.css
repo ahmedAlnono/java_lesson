@@ -14,6 +14,19 @@
 samp{
     color:#66656e;
 }
+v{
+    color:rgb(71, 120, 255);
+}
+s{
+    color:rgb(194, 252, 79);
+    text-decoration: none;
+}
+f{
+    color: purple;
+}
+g{
+    color:rgb(0, 179, 0);
+}
 mark{
     color:black;
     background-color: yellow;
