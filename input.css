@@ -41,7 +41,7 @@ mark{
 aside{
     height: 100dvh;
     overflow-y:auto;
-    width:120px;
+    width:150px;
     background-color: rgb(33, 33, 41);
 }
 aside li{
@@ -68,7 +68,7 @@ ol{
 }
 .container section{
     background-color: rgb(11, 14, 20);
-    width:calc(100dvw - 120px);
+    width:calc(100dvw - 150px);
     height: 100dvh;
     display:none;
     padding:14px;
@@ -198,14 +198,17 @@ section div h4{
     aside{
         position: absolute;
         top:50%;
-        right: 0;
+        right: 400px;
         translate: 0 -50%;
+        animation-duration: 300ms;
+        animation-fill-mode: forwards;
     }
     aside[expand=false]{
-        z-index:0;
+        animation-name: unexpand;
     }
     aside[expand=true]{
         z-index:4;
+        animation-name: expand;
     }
     section.active{
         width:100dvw;
@@ -223,20 +226,41 @@ section div h4{
     }
     .nav-icon{
         display:block;
-        width:30px;
-        height:26px;
         position: absolute;
-        right:2%;
+        right:1%;
         top:0;
         background-color: white;
         z-index:99;
         cursor: pointer;
+        padding:4px;
+        border-radius: 50%;
     }
     .nav-icon span{
         display:block;
         background-color:black;
         width:90%;
-        height: 4px;
+        height: 12px;
         margin:3px auto;
+        padding:14px;
+        border-radius: 50%;
+
+    }
+}
+@keyframes expand {
+    from{
+        position:absolute;
+        right:400px;
+    }to{
+        position:absolute;
+        right:0px;
+    }
+}
+@keyframes unexpand {
+    from{
+        position: absolute;
+        right: 0;
+    }to{
+        position:absolute;
+        right:400px;
     }
 }
