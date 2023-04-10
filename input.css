@@ -119,6 +119,9 @@ h1{
     position: relative;
     overflow-x:auto;
 }
+h2{
+    overflow-x:auto;
+}
 .code h2::before{
     content:"";
     position: absolute;
